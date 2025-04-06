@@ -47,9 +47,14 @@ Youtube : https://www.youtube.com/watch?v=56dSXI2PbCQ&t=148s
   > username: sys as SYSDBA, password: password, host: localhost, port: 1521. servicename: FREE
   > username: system, password: password, host: localhost, port: 1521. servicename: FREE
   > username: pdbadmin, password: password, host: localhost, port: 1521. servicename: FREEPDB1
-Example: 
-<img width="570" alt="image" src="https://github.com/user-attachments/assets/2b8291ca-bc48-4160-bb0b-5b64d272d80e" />
 
+### Example: 
+<img width="570" alt="image" src="https://github.com/user-attachments/assets/2b8291ca-bc48-4160-bb0b-5b64d272d80e" />
+Similarly, use above users SYSTEM / PDBADMIN to create connections in SQL Developer if needed.
+
+## TO CREATE TEST DATABASE / USERS
+
+### OT USER CREATION [ORDER TRANSACTIONS] ![image](https://github.com/user-attachments/assets/1c622a80-e13a-4870-a04a-eff8042efa58)
 * Login to "sys as SYSDBA"
 * REFER : https://www.oracletutorial.com/getting-started/create-oracle-sample-database-for-practice/
 * Switch to Pluggable DB from SYSDBA:
@@ -63,10 +68,11 @@ Example:
   > # DONT FORGET TO COMMIT
 * Now create another connection in SQL Developer with
   >> username: OT, password: Orcl1234, host: localhost, port: 1521. servicename: FREEPDB1
-* Download the same Table and Data : https://www.oracletutorial.com/getting-started/oracle-sample-database/
+* Download the same Table and Data : [Order Transactions Zip](https://oracletutorial.com/wp-content/uploads/2019/01/oracle-sample-database.zip)
 * And Run the sql files.
 * # DONT FORGET TO COMMIT
 
+### HR USER CREATION [HUMAN RESOURCES]
 * Similarly, we can create HR
 * Login to "sys as SYSDBA"
 * Switch to Pluggable DB from SYSDBA:
@@ -83,5 +89,14 @@ Example:
 * Download the same Table and Data : [https://www.oracletutorial.com/getting-started/oracle-sample-database/](https://github.com/oracle-samples/db-sample-schemas/tree/main/human_resources)
 * And Run the sql files.
 * # DONT FORGET TO COMMIT
+  
+
+#### SIMILARLY
+##### * CUSTOMER ORDERS[CO] => [https://github.com/oracle-samples/db-sample-schemas/tree/main/customer_orders](https://github.com/oracle-samples/db-sample-schemas/tree/main/customer_orders)
+##### * SALES HISTORY[SH] => [https://github.com/oracle-samples/db-sample-schemas/tree/main/customer_orders](https://github.com/oracle-samples/db-sample-schemas/tree/main/sales_history)
+##### * ORDER ENTRY[OR] => [https://github.com/oracle-samples/db-sample-schemas/tree/main/customer_orders](https://github.com/oracle-samples/db-sample-schemas/tree/main/sales_history)](https://github.com/oracle-samples/db-sample-schemas/tree/main/order_entry)
+##### * PRODUCT MEDIA[PM] => https://github.com/oracle-samples/db-sample-schemas/tree/main/product_media
+
+
 
 

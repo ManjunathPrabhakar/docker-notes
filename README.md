@@ -18,18 +18,18 @@ Youtube : https://www.youtube.com/watch?v=56dSXI2PbCQ&t=148s
 * More Details on the Oracle Database Free Docker Image : https://container-registry.oracle.com/ords/f?p=113:4:109357956445442:::4:P4_REPOSITORY,AI_REPOSITORY,AI_REPOSITORY_NAME,P4_REPOSITORY_NAME,P4_EULA_ID,P4_BUSINESS_AREA_ID:1863,1863,Oracle%20Database%20Free,Oracle%20Database%20Free,1,0&cs=36i9xwf9rwgs-jSciryRk6wugewGURfJoDq1p5nLtMLQ9yYGnOhpeAd11JD5Lstt5t4h_pZ4NOPa-VlPcD_EVyQ
 * The Oracle Database 23ai Free Container Image contains a pre-built database, so the startup time is very fast. Fast startup can be helpful in CI/CD scenarios. To start an Oracle Database Free container, run the following command where,<oracle-db> can be any custom name for the container: "docker run -d --name oracle-free-db container-registry.oracle.com/database/free:latest"
 * When the container is started, a random password is generated for the SYS, SYSTEM and PDBADMIN users. This is termed the default password.
-* To connect from outside of the container using SQL*Plus, run the following commands:
-* # To connect to the database at the CDB$ROOT level as sysdba:
-** sqlplus sys/<your password>@//localhost:<port mapped to 1521>/FREE as sysdba
-* # To connect as non sysdba at the CDB$ROOT level:
-** sqlplus system/<your password>@//localhost:<port mapped to 1521>/FREE
-* # To connect to the default Pluggable Database (PDB) within the FREE Database:
-** sqlplus pdbadmin/<your password>@//localhost:<port mapped to 1521>/FREEPDB1
+# To connect from outside of the container using SQL*Plus, run the following commands:
+ ## To connect to the database at the CDB$ROOT level as sysdba:
+* sqlplus sys/<your password>@//localhost:<port mapped to 1521>/FREE as sysdba
+ ## To connect as non sysdba at the CDB$ROOT level:
+* sqlplus system/<your password>@//localhost:<port mapped to 1521>/FREE
+ ## To connect to the default Pluggable Database (PDB) within the FREE Database:
+* sqlplus pdbadmin/<your password>@//localhost:<port mapped to 1521>/FREEPDB1
 
-* To connect to the Oracle Database by running a SQL*Plus command from within the container using one of the following commands:
-** docker exec -it <oracle-db> sqlplus sys/<your_password>@FREE as sysdba
-** docker exec -it <oracle-db> sqlplus system/<your_password>@FREE
-** docker exec -it <oracle-db> sqlplus pdbadmin/<your_password>@FREEPDB1
+# To connect to the Oracle Database by running a SQL*Plus command from within the container using one of the following commands:
+* docker exec -it <oracle-db> sqlplus sys/<your_password>@FREE as sysdba
+* docker exec -it <oracle-db> sqlplus system/<your_password>@FREE
+* docker exec -it <oracle-db> sqlplus pdbadmin/<your_password>@FREEPDB1
 
   ########################################################################
 

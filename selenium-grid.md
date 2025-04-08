@@ -38,6 +38,21 @@
 }
 ```
 ![image](https://github.com/user-attachments/assets/a690404c-e211-4d94-8944-1bac667acbcc)
+#@ Alternatively In order to use Standalone
+* Refer : https://hub.docker.com/u/selenium?page=1&search=standalone
+* Note that hub and node are on the same localhost
+* <img width="812" alt="image" src="https://github.com/user-attachments/assets/4b44af3d-db04-47cb-8589-27686de29939" />
+* <img width="761" alt="image" src="https://github.com/user-attachments/assets/214822b4-7b31-4f81-a153-81abf02679de" />
+
+## *************************************************************************************************************
+You can also execute playwright https://playwright.dev/docs/next/selenium-grid
+Start Standalone
+``` docker run -d -p 4444:4444 --shm-size="2g" -e SE_NODE_GRID_URL="http://localhost:4444" selenium/standalone-chromium:latest ```
+Then Execute like
+``` SELENIUM_REMOTE_URL=http://localhost:4444 npx playwright test ```
+``` SELENIUM_REMOTE_URL=http://localhost:4444 mvn clean test ```
+
+
 
 
 
